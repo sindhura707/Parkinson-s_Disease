@@ -1,12 +1,18 @@
 # Comparative-Analysis-of-ML-models-for-detection-of-Parkinson-s-Disease-from-audios.
-This project focuses on detecting Parkinson's disease using machine learning models trained on audio features. The study compares the performance of Logistic Regression, Gradient Boosting, Random Forest, and K-Nearest Neighbors (KNN) classifiers to determine the most effective approach for accurate detection.
+This project presents a comparative study of machine learning approaches for early detection of Parkinson’s disease using voice-based audio features. The system analyzes acoustic biomarkers extracted from speech recordings and evaluates multiple classification models to determine the most reliable method for disease prediction. Logistic Regression, Gradient Boosting, Random Forest, and K-Nearest Neighbors (KNN) are implemented and assessed under a unified experimental pipeline.
 
 Features
-Preprocessing Audio Data: Extract relevant features from audio recordings.
-Training and Evaluation: Compare four ML models on the same dataset.
-Performance Metrics: Analyze models based on accuracy, precision, recall, and F1-score.
-Flowchart Visualization: A detailed flowchart to outline the process.
-Project Structure
+Audio Feature Engineering:
+Extract clinically relevant vocal features from speech recordings to capture neurological impairments associated with Parkinson’s disease.
+
+Standardized Model Training:
+Train multiple machine learning models using identical preprocessing, dataset splits, and evaluation criteria for fair comparison.
+
+Performance Evaluation:
+Assess model effectiveness using Accuracy, Precision, Recall, and F1-Score along with confusion matrix analysis.
+
+Workflow Visualization:
+Provide a structured flowchart illustrating preprocessing, training, evaluation, and result generation stages.
 plaintext
 Copy code
 parkinsons-disease-detection/  
@@ -54,7 +60,7 @@ Clone the repository:
 
 bash
 Copy code
-git clone https://github.com/your-username/parkinsons-disease-detection.git  
+git clone https://github.com/your-username/parkinson-s_Disease.git  
 cd parkinsons-disease-detection  
 Install the necessary libraries:
 
@@ -68,3 +74,4 @@ python codes/knn.py
 
 Flowchart:
 ![image](https://github.com/user-attachments/assets/095349c1-f6fd-44aa-acba-d920d07428cc)
+
