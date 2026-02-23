@@ -1,70 +1,125 @@
-# Comparative-Analysis-of-ML-models-for-detection-of-Parkinson-s-Disease-from-audios.
-This project focuses on detecting Parkinson's disease using machine learning models trained on audio features. The study compares the performance of Logistic Regression, Gradient Boosting, Random Forest, and K-Nearest Neighbors (KNN) classifiers to determine the most effective approach for accurate detection.
+Comparative Analysis of Machine Learning Models for Detection of Parkinson’s Disease from Audio Data
+
+This project presents a comparative study of machine learning approaches for early detection of Parkinson’s disease using voice-based audio features. The system analyzes acoustic biomarkers extracted from speech recordings and evaluates multiple classification models to determine the most reliable method for disease prediction. Logistic Regression, Gradient Boosting, Random Forest, and K-Nearest Neighbors (KNN) are implemented and assessed under a unified experimental pipeline.
 
 Features
-Preprocessing Audio Data: Extract relevant features from audio recordings.
-Training and Evaluation: Compare four ML models on the same dataset.
-Performance Metrics: Analyze models based on accuracy, precision, recall, and F1-score.
-Flowchart Visualization: A detailed flowchart to outline the process.
+
+Audio Feature Engineering:
+Extract clinically relevant vocal features from speech recordings to capture neurological impairments associated with Parkinson’s disease.
+
+Standardized Model Training:
+Train multiple machine learning models using identical preprocessing, dataset splits, and evaluation criteria for fair comparison.
+
+Performance Evaluation:
+Assess model effectiveness using Accuracy, Precision, Recall, and F1-Score along with confusion matrix analysis.
+
+Workflow Visualization:
+Provide a structured flowchart illustrating preprocessing, training, evaluation, and result generation stages.
+
 Project Structure
-plaintext
-Copy code
-parkinsons-disease-detection/  
-├── codes/                            # Folder containing code for each ML model  
-│   ├── logistic_regression.py  
-│   ├── gradient_boosting.py  
-│   ├── random_forest.py  
-│   ├── knn.py  
-├── data/                             # Dataset folder (add your audio dataset here)  
-│   ├── parkinsons_audio_data.csv  
-├── flowchart.png                     # Flowchart illustrating the methodology  
-├── README.md                         # Project documentation  
-└── results/                          # Folder for saving model results and graphs  
-    ├── performance_metrics.csv  
-    ├── model_comparison.png  
+parkinsons-disease-detection/
+├── codes/                     # Implementation of ML models
+│   ├── logistic_regression.py
+│   ├── gradient_boosting.py
+│   ├── random_forest.py
+│   └── knn.py
+├── data/                      # Dataset directory
+│   └── parkinsons_audio_data.csv
+├── flowchart.png              # Methodology workflow diagram
+├── README.md                  # Project documentation
+└── results/                   # Generated outputs and visualizations
+    ├── performance_metrics.csv
+    └── model_comparison.png
 Dataset
-The dataset contains audio recordings labeled as Parkinson's and non-Parkinson's.
-Audio features include jitter, shimmer, HNR (Harmonic-to-Noise Ratio), and other parameters essential for detecting vocal impairment.
+
+The dataset consists of labeled speech recordings categorized as Parkinson’s and healthy samples. Audio signals are transformed into structured numerical features including:
+
+Jitter (frequency variation)
+
+Shimmer (amplitude variation)
+
+Harmonic-to-Noise Ratio (HNR)
+
+Additional acoustic indicators of vocal stability and impairment
+
+These features serve as biomarkers for detecting motor control degradation affecting speech production.
+
 Models Used
-Logistic Regression: A simple yet effective classifier for binary problems.
-Gradient Boosting: An ensemble method that optimizes classification accuracy through iterative boosting.
-Random Forest: A robust ensemble learning method using decision trees.
-K-Nearest Neighbors (KNN): A non-parametric algorithm based on proximity.
+
+Logistic Regression
+Establishes a baseline linear classification model for binary disease prediction.
+
+Gradient Boosting
+Sequential ensemble learning method that improves predictive performance by minimizing classification errors iteratively.
+
+Random Forest
+Bagging-based ensemble approach leveraging multiple decision trees for improved robustness and generalization.
+
+K-Nearest Neighbors (KNN)
+Distance-based algorithm that classifies samples according to similarity in feature space.
+
 Workflow
-1. Preprocessing
-Extract features from the audio recordings using libraries such as Librosa or Praat.
-Normalize and split the dataset into training and testing sets.
 
-3. Training
-Train each model using the same dataset and perform hyperparameter tuning for optimal performance.
+Preprocessing
 
-4. Evaluation:   
-Compare models based on performance metrics such as:
-Accuracy,
-Precision,
-Recall.
-F1-Score,
-Use a confusion matrix to visualize predictions.
+Extract audio features using tools such as Librosa or Praat.
 
-5. Results
-Summarize results in a tabular format for easy comparison.
-Visualize performance metrics using bar graphs.
+Normalize feature values.
+
+Split dataset into training and testing subsets.
+
+Training
+
+Train all models on identical datasets.
+
+Perform hyperparameter tuning to optimize performance.
+
+Evaluation
+
+Compare models using:
+
+Accuracy
+
+Precision
+
+Recall
+
+F1-Score
+
+Generate confusion matrices for prediction analysis.
+
+Results
+
+Aggregate performance metrics in tabular format.
+
+Visualize model comparison using graphical plots.
+
 How to Run
+
 Clone the repository:
 
-bash
-Copy code
-git clone https://github.com/your-username/parkinsons-disease-detection.git  
-cd parkinsons-disease-detection  
-Install the necessary libraries:
+git clone https://github.com/your-username/parkinson-s_disease.git
+cd parkinson-s_disease
 
-Run the individual model scripts:
+Install required dependencies:
 
-bash
-python codes/lr.py  
-python codes/final.py  
-python codes/rf.py  
-python codes/knn.py  
+pip install -r requirements.txt
 
+Run individual model scripts:
+
+python codes/lr.py
+python codes/final.py
+python codes/rf.py
+python codes/knn.py
+Project Goals
+
+Compare classical machine learning algorithms for medical audio classification.
+
+Identify the most reliable model for Parkinson’s detection.
+
+Demonstrate an end-to-end ML pipeline from feature extraction to evaluation.
+
+Provide a reproducible framework for healthcare-focused machine learning research
 Flowchart:
 ![image](https://github.com/user-attachments/assets/095349c1-f6fd-44aa-acba-d920d07428cc)
+
